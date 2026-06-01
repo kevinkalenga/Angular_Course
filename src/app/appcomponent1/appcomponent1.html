@@ -1,0 +1,33 @@
+<p>Hi John; {{title}}</p>
+
+<button [disabled]="btnClick">Click Me</button>
+
+<h1 [style.color]="textColor">Master In Angular</h1>
+
+<p [class.active]="isActive">Test Paragraphe</p> 
+
+<table border="1px">
+      <tr>
+         <td>Header 1</td>
+         <td>Header 2</td>
+         <td>Header 3</td>
+      </tr>
+      <tr>
+        <td [attr.colspan]="clSpan">ASD</td>
+        <td>QWE</td>
+        
+      </tr>
+      <tr>
+         <td>valeur 1</td>
+         <td>valeur 2</td>
+         <td>valeur 3</td>
+      </tr>
+</table> 
+
+<input [style.marginTop.px]="topMargin" [(ngModel)]="userName">
+<p>{{userName}}</p>
+
+<img [src]="imageUrl" [style.width.px]="width" [style.height.px]="height">
+<br>
+
+<button [style.color]="textButtonRed" (click)="onButtonClick()">Click here</button>
