@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-appcomponent1',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './appcomponent1.html',
   styleUrls: ['./appcomponent1.css'],
 })
 export class Appcomponent1 {
   title = "Welcome to our web site";
-  btnClick = true;
+  btnClick = false;
   textColor = "blue";
   isActive = false;
   clSpan = 2;
@@ -20,9 +21,17 @@ export class Appcomponent1 {
   width = 150;
   height = 100;
   textButtonRed = "black";
-
+  blackColor = "red";
+  mrgTop = 6;
+  padding = 20;
+  changeColor = true;
+  isPrimary = true;
+  isLarge = false;
+  items = ['Banana', 'Mango', 'Ananas'];
+  status = 'pending';
   onButtonClick(){
     this.textButtonRed = "red";
+    this.btnClick = true;
   }
- 
+
 }

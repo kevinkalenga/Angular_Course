@@ -4,7 +4,7 @@
 
 <h1 [style.color]="textColor">Master In Angular</h1>
 
-<p [class.active]="isActive">Test Paragraphe</p> 
+<p [class.active]="isActive">Test Paragraphe</p>
 
 <table border="1px">
       <tr>
@@ -15,14 +15,14 @@
       <tr>
         <td [attr.colspan]="clSpan">ASD</td>
         <td>QWE</td>
-        
+
       </tr>
       <tr>
          <td>valeur 1</td>
          <td>valeur 2</td>
          <td>valeur 3</td>
       </tr>
-</table> 
+</table>
 
 <input [style.marginTop.px]="topMargin" [(ngModel)]="userName">
 <p>{{userName}}</p>
@@ -31,3 +31,40 @@
 <br>
 
 <button [style.color]="textButtonRed" (click)="onButtonClick()">Click here</button>
+
+
+<div [ngStyle]="{
+  'background-color': blackColor,
+  'margin-top.px': mrgTop,
+  'color': textColor,
+  'font-size.px': 20,
+  'padding.px': padding
+}">
+  Attribute Directives Demo
+</div>
+
+<div [style.color]="changeColor ? 'green' : 'yellow'">
+  Attribute Directives Demo 2
+</div>
+
+<div [ngClass]="{'primary':isPrimary, 'large':isLarge}">
+  Attribute Directives Demo 3
+</div>
+
+<div *ngIf="btnClick">
+   <h1>Structural Directive</h1>
+</div>
+
+<div *ngFor="let item of items">
+    <ul>
+      <li>{{ item }}</li>
+    </ul>
+</div>
+<div [ngSwitch]="status">
+    <div *ngSwitchCase="'pending'">
+      <h3>Status is pending</h3>
+    </div>
+    <div *ngSwitchCase="'approved'">
+      <h3>Status is approved</h3>
+    </div>
+</div>
