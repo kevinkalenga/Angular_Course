@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Highlight } from '../highlight';
 
 @Component({
   selector: 'app-appcomponent1',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,  Highlight],
   templateUrl: './appcomponent1.html',
   styleUrls: ['./appcomponent1.css'],
 })
